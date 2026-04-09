@@ -1,0 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", serif;
+}
+
+body {
+    background-color: rgb(233, 233, 233);
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+}
+
+.bg-tes{
+  background-color: rgb(233, 233, 233);
+}
+
+.bg-blur{
+      background: rgba(255, 255, 255, 0.17);
+        /* background: rgba(255, 255, 255, 0.3); */
+        /* semi transparan */
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(16px);
+}
+
+.bg-aqua{
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  border-radius: 50px;
+  border: 2px solid black;
+}
+
+.logo a{
+  text-decoration: none;
+  color: black;
+}
+
+.logo a:hover{
+  color: #eab208;
+}
+
+/* Hero */
+.hero {
+  margin-top: 100px;
+}
+
+.hero-box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../../assets/images/black.jpg);
+  width: 100%;
+  border-radius: 25px;
+  padding: 100px 20px;
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-box h1,
+.hero-box p{
+  margin-left: 50px;
+}
+
+.hero-box .button{
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-box h1 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
+.hero-box p {
+  margin-bottom: 30px;
+  line-height: 2;
+  width: 500px;
+  opacity: 75%;
+  font-weight: bold;
+}
+
+.lihat-collabolator{
+  transition: 0.2s ease !important;
+}
+
+.lihat-collabolator:hover{
+  transform: scale(1.05);
+}
+
+.d-inline-flex{
+  margin: 0 !important;
+}
+
+/* Tentang Kami */
+.tentang {
+  margin-top: 150px;
+}
+
+.tentang-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.tentang-box img {
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+/* .tentang-box img:hover{
+  transform: translateY(-5px);
+} */
+
+.tentang-box h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.tentang-box p {
+  line-height: 2;
+  text-align: justify;
+}
+
+.tentang-box .fananda {
+  font-weight: bold;
+  color: #eab208;
+}
+
+#carouselExampleControls .carousel-inner {
+  border-radius: 20px;
+  /* bebas ubah */
+  overflow: hidden;
+  /* WAJIB supaya gambar ikut melengkung */
+}
+
+.carousel-control-prev{
+  border-radius: 20px;
+}
+
+/* collaborations */
+#collaborations {
+  margin-top: 150px;
+}
+
+.collabolator {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.collabolator .box-collab img{
+  height: 120px;
+  border-radius: 100px;
+   transition: 0.3s;
+}
+
+.collabolator .box-vousa img {
+  border: 5px solid black;
+}
+
+.collabolator .box-collab img:hover{
+  transform: scale(1.1);
+}
+
+.coret{
+  text-decoration: line-through;
+}
+
+/* detail */
+.detail{
+  padding-bottom: 100px;
+}
+
+.detail{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.detail .box{
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+   transition: 0.3s;
+}
+
+.detail .box img{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.detail .box .desc{
+  padding: 20px;
+}
+
+.detail .box:hover {
+      transform: translateY(-8px);
+    }
+
+/* Profile */
+.text-profile{
+  margin-bottom: 100px;
+}
+
+#profile .profile img{
+  height: 300px;
+  border-radius: 150px;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.671);
+}
+
+#profile .profile img:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.863);
+}
+
+#profile .three img{
+  border: 5px solid black;
+}
+
+#profile .border-bottom{
+  width: 300px;
+}
+
+#profile .ig-icons{
+  color: black;
+  transition: 0.3s ease;
+}
+
+#profile .ig-icons:hover{
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer{
+  margin-top: 150px;
+  background-color: rgb(29, 29, 29);
+}
+
+.footer .copyright{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.footer .text-fananda,
+.footer .text-dhevv,
+.footer .text-lafern,
+.footer .text-vousa
+{
+  color: rgba(255, 255, 255, 0.500);
+  transition: 0.3s ease;
+}
+
+.footer .text-fananda:hover{
+  color: #eab208;
+}
+
+.footer .text-dhevv:hover{
+  color: red;
+}
+
+.footer .text-lafern:hover{
+  color: rgb(0, 89, 255);
+}
+
+.footer .text-vousa:hover{
+  color: white;
+}
+
+.footer a:hover i {
+  color: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4); 
+  transform: scale(1.2);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Responsive */
+
+/* max-width: 992px (Tablet Landscape) */
+@media (max-width: 992px) {
+  .container {
+    width: 90%; 
+  }
+
+  .hero-box p{
+    width: 100%;
+  }
+
+  .tentang .tentang-box{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* max-width: 991px */
+@media (max-width: 991px) {
+  .navbar-nav{
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-link{
+    margin-top: 10px;
+  }
+}
+
+/* max-width: 768px (Tablet Portrait) */
+@media (max-width: 768px) {
+  .tentang {
+    margin-top: 50px;
+  }
+
+  .tentang-box {
+    grid-template-columns: 1fr;
+  }
+
+  .tentang .box h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  #collaborations{
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .collabolator {
+    flex-direction: column;
+  }
+
+  .collabolator .box-collab img{
+    height: 200px;
+  }
+
+  .detail{
+    gap: 30px;
+  }
+
+  .hero-box{
+    text-align: center;
+  }
+
+  .hero-box .button{
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  /* profile */
+  .text-profile{
+    text-align: center;
+  }
+}
+
+/* max-width: 642px (Mid Phone) */
+@media (max-width: 642px) {
+  .hero-box {
+    text-align: center;
+  }
+
+  .hero-box h1,
+  .hero-box p{
+    margin-left: 0;
+  }
+}
+
+/* max-width: 575px (Phone) */
+@media (max-width: 575px) {
+  .hero-box p {
+    width: 100%;
+  }
+
+  .tentang-box .box p{
+    width: 95%;
+    margin-inline: auto ;
+  }
+}
+
+/* max-width: 475px (Small Phone) */
+@media (max-width: 475px) {
+  .hero-box {
+    text-align: center;
+  }
+
+  .hero-box h1 {
+    font-size: 30px;
+  }
+
+  .hero-box p {
+    font-size: 15px;
+  }
+}
