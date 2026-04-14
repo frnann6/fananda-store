@@ -4,6 +4,9 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
+use App\Models\ProductModel;
+use App\Models\BrandModel;
+use App\Models\ProfileModel;
 
 class Home extends BaseController
 {
@@ -12,22 +15,24 @@ class Home extends BaseController
         return view('home');
     }
 
-    public function produk()
+    public function products(){
+        $productModel = new ProductModel();
+        $data = $productModel->findAll();
+
+        return $this->response->setJSON($data);
+    }
+
+    public function brands()
     {
-        $db = \Config\Database::connect();
+        $brandModel = new BrandModel();
+        $data = $brandModel->findAll();
 
-        $builder = $db->table('products');
-        $builder->select('products.*, brands.name as brand_name, brands.logo');
-        $builder->join('brands', 'brands.id = products.brand_id');
-
-        $data = $builder->get()->getResult();
-        
         return $this->response->setJSON($data);
     }
 
     public function profiles()
     {
-        $model = new \App\Models\ProfileModel();
+        $model = new ProfileModel();
         $data = $model->findAll();
 
         return $this->response->setJSON($data);

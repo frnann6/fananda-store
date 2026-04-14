@@ -7,7 +7,7 @@ function formatRupiah(angka){
 
 const collab = document.getElementById("collab");
 
-fetch("/produk")
+fetch("/brands")
   .then((res) => res.json())
   .then((logos) => {
     
@@ -26,7 +26,7 @@ let productsData = []
 
 const detail = document.getElementById("detail");
 
-fetch("/produk")
+fetch("/products")
   .then((res) => res.json())
   .then((products) => {
 
