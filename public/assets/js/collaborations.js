@@ -1,4 +1,10 @@
 // Collaborations section
+
+// Function
+function formatRupiah(angka){
+  return Number(angka).toLocaleString('id-ID');
+}
+
 const collab = document.getElementById("collab");
 
 fetch("/produk")
@@ -35,10 +41,10 @@ fetch("/produk")
                 <p>${product.description}</p>
                 ${
                   Number(product.price_cut) > Number(product.price)
-                    ? `<h5 class="text-black coret">Rp ${product.price_cut}</h5>`
+                    ? `<h5 class="text-black coret">Rp ${formatRupiah(product.price_cut)}</h5>`
                     : ""
                 }
-                <h5 class="text-danger mt-3">Rp ${product.price}</h5>
+                <h5 class="text-danger mt-3">Rp ${formatRupiah(product.price)}</h5>
             </div>
         </div>
       `;
@@ -56,8 +62,8 @@ document.getElementById('detail').addEventListener('click', function(e) {
     document.getElementById("modalImg").src = product.img;
     document.getElementById("modalName").textContent = product.name;
     document.getElementById("modalDesc").textContent = product.description;
-    document.getElementById("modalPriceCut").textContent = "Rp " + product.price_cut;
-    document.getElementById("modalPrice").textContent = "Rp " + product.price;
+    document.getElementById("modalPriceCut").textContent = "Rp " + formatRupiah(product.price_cut);
+    document.getElementById("modalPrice").textContent = "Rp " + formatRupiah(product.price);
 
     const modal = new bootstrap.Modal(document.getElementById("productModal"));
     modal.show();
