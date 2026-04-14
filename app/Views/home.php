@@ -197,6 +197,7 @@
             <div class="col-md-6">
               <h2 id="modalName" class="fw-bold"></h2>
               <p id="modalDesc"></p>
+              <h4 id="modalPriceCut" class="text-black mt-4 coret"></h4>
               <h4 id="modalPrice" class="text-danger mt-4"></h4>
             </div>
           </div>
@@ -207,7 +208,7 @@
   <!-- End Product Modal -->
 
   <!-- js -->
-  <script type="module" src="<?= base_url('assets/js/main.js')?>"></script>
+  <script type="module" src="<?= base_url('assets/js/main.js') ?>"></script>
 
   <!-- bootstrap js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
