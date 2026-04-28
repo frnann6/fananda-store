@@ -107,5 +107,5 @@
     <!-- ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 
-    <script type="module" src="<?= base_url('assets/js/apexcharts.js') ?>"></script>
+    <script type="module" src="<?= base_url('assets/js/charts/area.js') ?>"></script>
 </body>

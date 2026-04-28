@@ -1,6 +1,6 @@
         var options = {
             chart: {
-                type: 'area',
+                type: 'bar',
                 height: 450,
                 toolbar: {
                     show: false
@@ -25,34 +25,12 @@
                 categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
             },
 
-            // Untuk Bar
-            // plotOptions: {
-            //     bar: {
-            //         horizontal: false,
-            //         columnWidth: '45%',
-            //         borderRadius: 6 // bikin ujung rounded (modern 🔥)
-            //     }            // plotOptions: {
-            //     bar: {
-            //         horizontal: false,
-            //         columnWidth: '45%',
-            //         borderRadius: 6 // bikin ujung rounded (modern 🔥)
-            //     }
-            // },
-            // },
-
-            // Untuk Area
-            fill: {
-                type: 'gradient',
-                gradient: {
-                    shadeIntensity: 1,
-                    opacityFrom: 0.4,
-                    opacityTo: 0.05
-                }
-            },
-
-            stroke: {
-                curve: 'smooth',
-                width: 3
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    columnWidth: '45%',
+                    borderRadius: 6 // bikin ujung rounded (modern 🔥)
+                } 
             },
 
             colors: ['#0d6efd', 'darkviolet', '#27AE60'],
