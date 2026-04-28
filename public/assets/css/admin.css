@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #F5F6FA;
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
+    overflow-x: hidden;
+}
+
+    /* COLOUR */
+    .fananda {
+        color: #eab208 !important;
+    }
+
+    .bg-lightblue {
+        background-color: #E7F1FF;
+    }
+
+    .text-purple{
+        color: darkviolet;
+    }
+
+    .text-coin{
+        color: #DAA520;
+    }
+
+    .bg-lightpurple{
+        background-color: rgba(153, 50, 204, 0.097);
+    }
+
+    .bg-lightgreen{
+        background-color: rgba(144, 238, 144, 0.321);
+    }
+
+    .bg-lightyellow{
+        background-color: rgba(255, 166, 0, 0.164);
+    }
+     /* END COLOUR */
+
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 300px;
+      height: 100vh;
+    }
+
+    /* DASHBOARD */
+    .card-custom {
+        border-radius: 12px;
+        padding: 16px;
+        border: none;
+    }
+
+    .icon-box {
+            width: 60px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    }
+
+    .icon-dashboard{
+        font-size: 30px;
+    }
+    /* END DASHBOARD */
