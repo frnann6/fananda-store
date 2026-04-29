@@ -10,21 +10,17 @@ var options = {
   series: [
     {
       name: "Products",
-      data: [12, 13, 20, 15, 16, 17],
+      data: totalProductsData
     },
     {
       name: "Users",
-      data: [25, 40, 23, 45, 30, 60],
-    },
-    {
-      name: "Orders",
-      data: [30, 45, 35, 50, 49, 60],
+      data: totalUsersData
     },
   ],
 
-  xaxis: {
-    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
-  },
+            xaxis: {
+                categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Des']
+            },
 
 //   fill: {
 //     type: "gradient",
