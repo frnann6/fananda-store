@@ -1,3 +1,12 @@
+<?php
+
+/** @var int $totalProducts */
+/** @var int $totalUsers */
+/** @var int $chartProducts */
+/** @var int $chartUsers */
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,46 +46,46 @@
 
         <div class="row g-3 my-4">
             <div class="col-md-3">
-                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4">
+                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4 hover-shadow">
                     <div class="icon-box bg-lightblue text-primary">
                         <i class="bi bi-basket2-fill icon-dashboard"></i>
                     </div>
                     <div>
                         <small class="fw-semibold opacity-50">Total Products</small>
-                        <h4 class="fw-semibold my-2">124</h4>
+                        <h4 class="fw-semibold my-2" id="totalProducts"><?= $totalProducts ?></h4>
                         <small class="fw-semibold"><span class="text-success">+12%</span> <span class="opacity-50">from last month</span></small>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4">
+                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4 hover-shadow">
                     <div class="icon-box bg-lightpurple text-purple">
                         <i class="bi bi-people-fill icon-dashboard"></i>
                     </div>
                     <div>
                         <small class="fw-semibold opacity-50">Total Users</small>
-                        <h4 class="fw-semibold my-2">248</h4>
+                        <h4 class="fw-semibold my-2" id="totalUsers"><?= $totalUsers ?></h4>
                         <small class="fw-semibold"><span class="text-success">+12%</span> <span class="opacity-50">from last month</span></small>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4">
+                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4 hover-shadow">
                     <div class="icon-box bg-lightgreen text-success">
                         <i class="bi bi-file-earmark-text-fill icon-dashboard"></i>
                     </div>
                     <div>
                         <small class="fw-semibold opacity-50">Total Orders</small>
-                        <h4 class="fw-semibold my-2">532</h4>
+                        <h4 class="fw-semibold my-2">0</h4>
                         <small class="fw-semibold"><span class="text-success">+12%</span> <span class="opacity-50">from last month</span></small>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
-                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4">
+                <div class="card-custom bg-white shadow-sm d-flex align-items-center gap-3 p-4 hover-shadow">
                     <div class="icon-box bg-lightyellow text-coin">
                         <i class="bi bi-coin icon-dashboard"></i>
                     </div>
@@ -104,8 +113,45 @@
         lucide.createIcons();
     </script>
 
+    <!-- animate counter -->
+    <script>
+        function animateCounter(id, endValue, duration = 100) {
+            let start = 0;
+            let startTime = null;
+
+            function animate(time) {
+                if (!startTime) startTime = time;
+                let progress = time - startTime;
+                let value = Math.floor(progress / duration * endValue);
+
+                if (value > endValue) value = endValue;
+
+                document.getElementById(id).innerText = value;
+
+                if (progress < duration) {
+                    requestAnimationFrame(animate);
+                }
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // ambil dari PHP
+        let totalProducts = <?= json_encode($totalProducts) ?>;
+        let totalUsers = <?= json_encode($totalUsers) ?>;
+
+        // jalankan
+        animateCounter("totalProducts", totalProducts, 300);
+        animateCounter("totalUsers", totalUsers, 300);
+    </script>
+
     <!-- ApexCharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <script>
+        const totalProductsData = <?= json_encode($chartProducts) ?>;
+        const totalUsersData = <?= json_encode($chartUsers) ?>;
+    </script>
 
     <script type="module" src="<?= base_url('assets/js/charts/area.js') ?>"></script>
 </body>

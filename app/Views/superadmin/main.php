@@ -1,3 +1,7 @@
+<?php
+/** @var int $content */
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +37,7 @@
 <body>
 
     <div class="d-flex">
-        <?= view('superadmin/layout/sidebar')?>
+        <?= view('superadmin/layout/sidebar') ?>
 
         <!-- Content -->
         <div class="p-4 flex-grow-1">
